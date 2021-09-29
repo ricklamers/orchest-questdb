@@ -1,0 +1,69 @@
+{
+    "name": "Main",
+    "parameters": {},
+    "services": {
+        "questdb": {
+            "image": "questdb/questdb",
+            "name": "questdb",
+            "ports": [
+                9000,
+                9009,
+                8812
+            ],
+            "preserve_base_path": false,
+            "requires_authentication": true,
+            "scope": [
+                "interactive",
+                "noninteractive"
+            ]
+        }
+    },
+    "settings": {
+        "auto_eviction": false,
+        "data_passing_memory_size": "1GB"
+    },
+    "steps": {
+        "a4e0f05d-900c-43a3-a2e3-ce8435f7b5ea": {
+            "environment": "c57ee225-fb2a-4458-8e92-d81b29210633",
+            "file_path": "load.ipynb",
+            "incoming_connections": [],
+            "kernel": {
+                "display_name": "Python 3",
+                "name": "python"
+            },
+            "meta_data": {
+                "hidden": false,
+                "position": [
+                    246,
+                    345.5
+                ]
+            },
+            "parameters": {},
+            "title": "Load",
+            "uuid": "a4e0f05d-900c-43a3-a2e3-ce8435f7b5ea"
+        },
+        "d2285a0a-5de0-464b-a68a-3195cae42e27": {
+            "environment": "c57ee225-fb2a-4458-8e92-d81b29210633",
+            "file_path": "query.ipynb",
+            "incoming_connections": [
+                "a4e0f05d-900c-43a3-a2e3-ce8435f7b5ea"
+            ],
+            "kernel": {
+                "display_name": "Python 3",
+                "name": "python"
+            },
+            "meta_data": {
+                "hidden": false,
+                "position": [
+                    591.5,
+                    390.5
+                ]
+            },
+            "parameters": {},
+            "title": "Query",
+            "uuid": "d2285a0a-5de0-464b-a68a-3195cae42e27"
+        }
+    },
+    "uuid": "cae148f8-8bd8-44c9-9a0d-c0636a6a674a",
+    "version": "1.0.0"
+}
